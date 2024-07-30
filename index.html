@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leon's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect para fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=OCR+A+Std&display=swap" rel="stylesheet">
     <style>
         /* Estilos básicos para a página */
         body {
@@ -14,15 +19,24 @@
             margin: 0; /* Remove margem padrão do body */
             padding: 0; /* Remove padding padrão do body */
             position: relative; /* Necessário para posicionar elementos absolutamente dentro do body */
+            padding: 20px; /* Adiciona espaçamento ao redor da página */
+            box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
         }
 
         /* Nome animado como logo */
-        .logo {
-            font-family: 'Minecraft', sans-serif; /* Fonte Minecraft */
-            font-size: 24px; /* Tamanho da fonte */
-            color: #f0f0f0; /* Cor do texto */
+        .logo-container {
             text-align: center; /* Centraliza o texto horizontalmente */
             margin: 20px 0; /* Margem vertical de 20px */
+            height: 30px; /* Altura fixa para evitar alterações no layout */
+            overflow: hidden; /* Garante que o texto não ultrapasse o contêiner */
+        }
+
+        .logo {
+            font-family: 'Monaco', monospace; /* Fonte Monaco */
+            font-size: 24px; /* Tamanho da fonte */
+            color: #f0f0f0; /* Cor do texto */
+            white-space: nowrap; /* Impede quebra de linha */
+            display: inline-block; /* Impede quebra de linha e permite definir tamanho */
         }
 
         /* Contêiner do menu */
@@ -46,11 +60,12 @@
             box-sizing: border-box; /* Inclui padding na largura total */
         }
 
-        /* Estilo dos links do menu */
+        /* Estilo dos links do menu com fonte OCR A Std */
         .menu a {
             color: #f0f0f0; /* Cor do texto claro */
             text-decoration: none; /* Remove sublinhado dos links */
             margin: 0 15px; /* Margem horizontal de 15px */
+            font-family: 'OCR A Std', monospace; /* Fonte OCR A Std */
         }
 
         /* Posicionamento dos símbolos de tema e idioma */
@@ -65,25 +80,75 @@
             margin-left: 15px; /* Margem à esquerda dos símbolos */
         }
 
-        /* Estilo das seções */
-        .section {
-            margin: 50px 0; /* Margem vertical de 50px */
-        }
+        /* Seção de início */
+.section {
+    position: relative; /* Para posicionar o banner dentro da seção */
+}
 
-        /* Estilo dos títulos das seções */
-        .section h2 {
-            color: #00aaff; /* Cor azul para o título */
-        }
+/* Estilo da banner */
+.banner {
+    position: relative; /* Necessário para a sobreposição */
+    background-image: url('https://pixabay.com/get/g84cf5285aedd0d578cb05db8323541056c9cd04c6451c47582757856138640cbae745609d0a7908637d82452d91e809994e3ff82e3fe5ecf6d82ca46278f1bff_1920.jpg');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    color: #f0f0f0; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    overflow: hidden; /* Garante que a sobreposição não ultrapasse o contêiner */
+}
 
-        /* Estilo dos botões */
-        .section button {
-            background-color: #00aaff; /* Fundo azul dos botões */
-            color: #0a0a23; /* Texto escuro */
-            border: none; /* Remove borda padrão */
-            padding: 10px 20px; /* Espaçamento interno */
-            margin: 10px 0; /* Margem vertical */
-            cursor: pointer; /* Indica que é clicável */
-            border-radius: 15px; /* Bordas arredondadas */
+/* Sobreposição com fade */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade 0.8 */
+    z-index: 1; /* Coloca a sobreposição acima da imagem de fundo */
+}
+
+/* Ajustar o título */
+.banner h2 {
+    position: relative; /* Necessário para posicionar o texto acima da sobreposição */
+    z-index: 2; /* Coloca o texto acima da sobreposição */
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    font-weight: 700; /* Negrito */
+    font-style: italic; /* Itálico */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 3rem; /* Tamanho ajustado do texto */
+    line-height: 1.2; /* Altura da linha */
+    margin: 0; /* Remove margem padrão */
+}
+
+/* Estilo do texto "TI" em azul */
+.banner h2 span {
+    color: #00aaff; /* Cor azul para "TI" */
+}
+
+/* Estilo dos botões */
+.buttons {
+    position: relative; /* Garante que os botões ficam acima da sobreposição */
+    text-align: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaçamento acima dos botões */
+    z-index: 2; /* Coloca os botões acima da sobreposição */
+}
+
+.buttons button {
+    background-color: #00aaff; /* Fundo azul dos botões */
+    color: #0a0a23; /* Texto escuro */
+    border: none; /* Remove borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem em torno dos botões */
+    cursor: pointer; /* Indica que é clicável */
+    border-radius: 15px; /* Bordas arredondadas */
+    display: inline-block; /* Exibe os botões em linha */
+}
+
+
+        .buttons {
+            text-align: center; /* Centraliza os botões */
         }
 
         /* Estilo dos inputs e textarea no formulário de contato */
@@ -107,7 +172,9 @@
 </head>
 <body>
     <!-- Nome animado como logo -->
-    <div class="logo" id="logo">Leon Santiago</div>
+    <div class="logo-container">
+        <div class="logo" id="logo">Leon Santiago</div>
+    </div>
     
     <!-- Caixa do menu -->
     <div class="menu-container">
@@ -121,6 +188,7 @@
                 <a href="?lang=pt">Português</a>
             </div>
         </div>
+
         <!-- Menu de navegação -->
         <div class="menu">
             <a href="#inicio">Início</a>
@@ -134,17 +202,23 @@
 
     <!-- Seção de início -->
     <section id="inicio" class="section">
-        <!-- Título com cor diferenciada para "TI" -->
-        <h2>Soluções em <span style="color: #00aaff;">TI</span></h2>
-        <!-- Botões com bordas arredondadas -->
+        <div class="banner">
+        <!-- Título com cor diferenciada para "TI" e tamanho grande -->
+            <h2>Soluções em <span>TI</span></h2>
+        
+    <!-- Botões com bordas arredondadas -->
+    <div class="buttons">
         <button>Download CV</button>
         <button>Entre em contato</button>
+        </div>
+    </div>
     </section>
+    
 
     <!-- Seção sobre mim -->
     <section id="sobre" class="section">
         <h2>Sobre mim: Leon Santiago</h2>
-        <h3>Backend Developer Jr. & Suporte técnico</h3>
+        <h3 class="roboto-bold-italic">Backend Developer Jr. & Suporte técnico</h3>
         <div>
             <!-- Espaço para foto -->
             <img src="sua_foto.jpg" alt="Foto de Leon Santiago" style="max-width: 200px; height: auto;">
@@ -158,37 +232,49 @@
             <a href="https://github.com">GitHub</a>
         </div>
     </section>
-
+    
     <!-- Seção de formação -->
     <section id="formacao" class="section">
         <h2>Formação</h2>
     </section>
-
+    
     <script>
         // JavaScript para alternar entre temas claro e escuro
         document.querySelector('.theme-toggle').addEventListener('click', () => {
             document.body.classList.toggle('light-theme'); // Alterna a classe do tema
         });
 
-        // JavaScript para a animação do texto "Leon Santiago" no logo
-        const logo = document.querySelector('#logo');
-        const name = "Leon Santiago"; // Texto para ser digitado
-        let index = 0; // Índice do caractere atual
+        // JavaScript para a animação de digitação do logo
+        const logo = document.getElementById('logo');
+        const name = "Leon Santiago";
+        let index = 0;
+        let isDeleting = false;
+        const typingSpeed = 150; // Velocidade de digitação (milissegundos)
+        const deletingSpeed = 75; // Velocidade de deleção (milissegundos)
 
-        function typeEffect(element) {
-            if (index < name.length) {
-                element.innerHTML += name.charAt(index); // Adiciona caractere ao elemento
-                index++; // Incrementa o índice
-                setTimeout(() => typeEffect(element), 100); // Atraso de 100ms para o próximo caractere
+        function typeEffect() {
+            if (isDeleting) {
+                if (index > 0) {
+                    logo.innerHTML = name.substring(0, index - 1); // Remove o último caractere
+                    index--;
+                    setTimeout(typeEffect, deletingSpeed); // Mantém a velocidade de deleção constante
+                } else {
+                    isDeleting = false;
+                    setTimeout(typeEffect, 500); // Pausa antes de começar a digitar
+                }
+            } else {
+                if (index < name.length) {
+                    logo.innerHTML = name.substring(0, index + 1); // Adiciona o próximo caractere
+                    index++;
+                    setTimeout(typeEffect, typingSpeed); // Mantém a velocidade de digitação constante
+                } else {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 500); // Pausa depois de completar a digitação
+                }
             }
         }
-        typeEffect(logo); // Inicia a animação no logo
 
-        // JavaScript para alternar a exibição das opções de idioma
-        document.querySelector('.language-select').addEventListener('click', () => {
-            const options = document.querySelector('.language-options');
-            options.style.display = options.style.display === 'none' ? 'block' : 'none'; // Alterna a visibilidade das opções
-        });
+        typeEffect(); // Inicia a animação
     </script>
 </body>
 </html>
