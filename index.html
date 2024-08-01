@@ -3,172 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leon's Portfolio</title>
+    <title>Leon's Portfólio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Preconnect para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=OCR+A+Std&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos básicos para a página */
-        body {
-            background-color: #0a0a23; /* Fundo preto azulado */
-            color: #f0f0f0; /* Texto claro */
-            font-family: 'Arial', sans-serif; /* Fonte padrão */
-            margin: 0; /* Remove margem padrão do body */
-            padding: 0; /* Remove padding padrão do body */
-            position: relative; /* Necessário para posicionar elementos absolutamente dentro do body */
-            padding: 20px; /* Adiciona espaçamento ao redor da página */
-            box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
-        }
-
-        /* Nome animado como logo */
-        .logo-container {
-            text-align: center; /* Centraliza o texto horizontalmente */
-            margin: 20px 0; /* Margem vertical de 20px */
-            height: 30px; /* Altura fixa para evitar alterações no layout */
-            overflow: hidden; /* Garante que o texto não ultrapasse o contêiner */
-        }
-
-        .logo {
-            font-family: 'Monaco', monospace; /* Fonte Monaco */
-            font-size: 24px; /* Tamanho da fonte */
-            color: #f0f0f0; /* Cor do texto */
-            white-space: nowrap; /* Impede quebra de linha */
-            display: inline-block; /* Impede quebra de linha e permite definir tamanho */
-        }
-
-        /* Contêiner do menu */
-        .menu-container {
-            background-color: #1a1a3b; /* Cor de fundo para o menu */
-            padding: 10px 0; /* Espaçamento interno */
-            width: 100%; /* Largura total */
-            position: relative; /* Necessário para posicionar os ícones no canto superior direito */
-            text-align: center; /* Centraliza o texto do menu */
-            margin-bottom: 50px; /* Espaçamento abaixo do menu */
-            box-sizing: border-box; /* Inclui padding e borda na largura total */
-            max-width: 100%; /* Garante que não exceda a largura da tela */
-        }
-
-        /* Estilo do menu */
-        .menu {
-            display: flex; /* Usa flexbox para alinhar itens */
-            justify-content: center; /* Centraliza o menu horizontalmente */
-            align-items: center; /* Alinha itens verticalmente ao centro */
-            padding: 10px 20px; /* Espaçamento interno */
-            box-sizing: border-box; /* Inclui padding na largura total */
-        }
-
-        /* Estilo dos links do menu com fonte OCR A Std */
-        .menu a {
-            color: #f0f0f0; /* Cor do texto claro */
-            text-decoration: none; /* Remove sublinhado dos links */
-            margin: 0 15px; /* Margem horizontal de 15px */
-            font-family: 'OCR A Std', monospace; /* Fonte OCR A Std */
-        }
-
-        /* Posicionamento dos símbolos de tema e idioma */
-        .symbols {
-            position: absolute; /* Posiciona no canto superior direito */
-            top: 10px; /* Alinha ao topo */
-            right: 20px; /* Alinha à direita */
-        }
-
-        .symbols span {
-            cursor: pointer; /* Indica que é clicável */
-            margin-left: 15px; /* Margem à esquerda dos símbolos */
-        }
-
-        /* Seção de início */
-.section {
-    position: relative; /* Para posicionar o banner dentro da seção */
-}
-
-/* Estilo da banner */
-.banner {
-    position: relative; /* Necessário para a sobreposição */
-    background-image: url('https://pixabay.com/get/g84cf5285aedd0d578cb05db8323541056c9cd04c6451c47582757856138640cbae745609d0a7908637d82452d91e809994e3ff82e3fe5ecf6d82ca46278f1bff_1920.jpg');
-    background-size: cover; /* Cobre toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    color: #f0f0f0; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    overflow: hidden; /* Garante que a sobreposição não ultrapasse o contêiner */
-}
-
-/* Sobreposição com fade */
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade 0.8 */
-    z-index: 1; /* Coloca a sobreposição acima da imagem de fundo */
-}
-
-/* Ajustar o título */
-.banner h2 {
-    position: relative; /* Necessário para posicionar o texto acima da sobreposição */
-    z-index: 2; /* Coloca o texto acima da sobreposição */
-    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
-    font-weight: 700; /* Negrito */
-    font-style: italic; /* Itálico */
-    text-align: left; /* Alinha o texto à esquerda */
-    font-size: 3rem; /* Tamanho ajustado do texto */
-    line-height: 1.2; /* Altura da linha */
-    margin: 0; /* Remove margem padrão */
-}
-
-/* Estilo do texto "TI" em azul */
-.banner h2 span {
-    color: #00aaff; /* Cor azul para "TI" */
-}
-
-/* Estilo dos botões */
-.buttons {
-    position: relative; /* Garante que os botões ficam acima da sobreposição */
-    text-align: center; /* Centraliza os botões */
-    margin-top: 20px; /* Espaçamento acima dos botões */
-    z-index: 2; /* Coloca os botões acima da sobreposição */
-}
-
-.buttons button {
-    background-color: #00aaff; /* Fundo azul dos botões */
-    color: #0a0a23; /* Texto escuro */
-    border: none; /* Remove borda padrão */
-    padding: 10px 20px; /* Espaçamento interno */
-    margin: 10px; /* Margem em torno dos botões */
-    cursor: pointer; /* Indica que é clicável */
-    border-radius: 15px; /* Bordas arredondadas */
-    display: inline-block; /* Exibe os botões em linha */
-}
-
-
-        .buttons {
-            text-align: center; /* Centraliza os botões */
-        }
-
-        /* Estilo dos inputs e textarea no formulário de contato */
-        .contact-form input, .contact-form textarea {
-            display: block; /* Exibe como bloco */
-            width: 100%; /* Largura total */
-            margin: 10px 0; /* Margem vertical */
-            padding: 10px; /* Espaçamento interno */
-        }
-
-        /* Estilo para o tema claro */
-        .light-theme {
-            background-color: #f0f0f0; /* Fundo claro */
-            color: #0a0a23; /* Texto escuro */
-        }
-
-        .light-theme .menu a {
-            color: #0a0a23; /* Links escuros no tema claro */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Pixelify+Sans:wght@412&family=Roboto:ital,wght@1,700&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Nome animado como logo -->
@@ -203,22 +42,48 @@
     <!-- Seção de início -->
     <section id="inicio" class="section">
         <div class="banner">
-        <!-- Título com cor diferenciada para "TI" e tamanho grande -->
+            <!-- Título com cor diferenciada para "TI" -->
             <h2>Soluções em <span>TI</span></h2>
         
-    <!-- Botões com bordas arredondadas -->
-    <div class="buttons">
-        <button>Download CV</button>
-        <button>Entre em contato</button>
+            <!-- Botões com bordas arredondadas -->
+            <div class="buttons">
+                <button>Download CV</button>
+                <button>Entre em contato</button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Seção de Experiências -->
+    <section id="experiencias">
+        <h2>Experiências</h2>
+        <div class="experiencias">
+            <!-- Lista de Empresas -->
+            <div class="empresa-lista">
+                <div class="empresa" onclick="mostrarExperiencia('apple')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple Logo" class="empresa-logo">
+                </div>
+                <div class="empresa" onclick="mostrarExperiencia('google')">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" alt="Google Logo" class="empresa-logo">
+                </div>
+                <div class="empresa" onclick="mostrarExperiencia('airbnb')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Airbnb Logo" class="empresa-logo">
+                </div>
+
+             <!-- GIF de carregamento -->
+            <img src="https://gifdb.com/images/high/anime-dance-kawaii-girl-qqauna9j0gum8j66.gif" alt="Loading GIF" id="loading-gif">
+            </div>
+            
+            <!-- Detalhes da Experiência -->
+            <div class="detalhes-experiencia" id="detalhes-experiencia">
+                <!-- Conteúdo dinâmico será inserido aqui -->
+            </div>
+        </div>
     </section>
     
-
     <!-- Seção sobre mim -->
     <section id="sobre" class="section">
-        <h2>Sobre mim: Leon Santiago</h2>
-        <h3 class="roboto-bold-italic">Backend Developer Jr. & Suporte técnico</h3>
+        <h2>Sobre mim, o Leon</h2>
+        <h3 class="roboto-bold-italic">Backend Developer Jr. & Suporte Técnico</h3>
         <div>
             <!-- Espaço para foto -->
             <img src="sua_foto.jpg" alt="Foto de Leon Santiago" style="max-width: 200px; height: auto;">
@@ -227,9 +92,9 @@
         </div>
         <div>
             <!-- Links para redes sociais -->
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://linkedin.com">LinkedIn</a>
-            <a href="https://github.com">GitHub</a>
+            <a href="https://instagram.com/leonndas">Instagram</a>
+            <a href="https://linkedin.com/leon-santiago-gomes-45490715a/">LinkedIn</a>
+            <a href="https://github.com/leonndas">GitHub</a>
         </div>
     </section>
     
@@ -237,44 +102,7 @@
     <section id="formacao" class="section">
         <h2>Formação</h2>
     </section>
-    
-    <script>
-        // JavaScript para alternar entre temas claro e escuro
-        document.querySelector('.theme-toggle').addEventListener('click', () => {
-            document.body.classList.toggle('light-theme'); // Alterna a classe do tema
-        });
 
-        // JavaScript para a animação de digitação do logo
-        const logo = document.getElementById('logo');
-        const name = "Leon Santiago";
-        let index = 0;
-        let isDeleting = false;
-        const typingSpeed = 150; // Velocidade de digitação (milissegundos)
-        const deletingSpeed = 75; // Velocidade de deleção (milissegundos)
-
-        function typeEffect() {
-            if (isDeleting) {
-                if (index > 0) {
-                    logo.innerHTML = name.substring(0, index - 1); // Remove o último caractere
-                    index--;
-                    setTimeout(typeEffect, deletingSpeed); // Mantém a velocidade de deleção constante
-                } else {
-                    isDeleting = false;
-                    setTimeout(typeEffect, 500); // Pausa antes de começar a digitar
-                }
-            } else {
-                if (index < name.length) {
-                    logo.innerHTML = name.substring(0, index + 1); // Adiciona o próximo caractere
-                    index++;
-                    setTimeout(typeEffect, typingSpeed); // Mantém a velocidade de digitação constante
-                } else {
-                    isDeleting = true;
-                    setTimeout(typeEffect, 500); // Pausa depois de completar a digitação
-                }
-            }
-        }
-
-        typeEffect(); // Inicia a animação
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
