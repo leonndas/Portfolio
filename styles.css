@@ -1,0 +1,275 @@
+/* Estilos básicos para a página */
+body {
+    background-color: #1C1C1C; /* Fundo */
+    color: #f0f0f0; /* Texto claro */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    margin: 0; /* Remove margem padrão do body */
+    padding: 0; /* Remove padding padrão do body */
+    position: relative; /* Necessário para posicionar elementos absolutamente dentro do body */
+    padding: 20px; /* Adiciona espaçamento ao redor da página */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
+}
+
+/* Nome animado como logo */
+.logo-container {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin: 30px 0; /* Margem vertical de 20px */
+    height: 36px; /* Altura fixa para evitar alterações no layout */
+    overflow: hidden; /* Garante que o texto não ultrapasse o contêiner */
+}
+
+.logo {
+    font-family: "VT323", monospace;
+    font-size: 36px; /* Tamanho da fonte */
+    color: #f0f0f0; /* Cor do texto */
+    white-space: nowrap; /* Impede quebra de linha */
+    display: inline-block; /* Impede quebra de linha e permite definir tamanho */
+}
+
+
+
+/* Contêiner do menu */
+.menu-container {
+    background-color: #1a1a3b; /* Cor de fundo para o menu */
+    padding: 10px 0; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+    position: relative; /* Necessário para posicionar os ícones no canto superior direito */
+    text-align: center; /* Centraliza o texto do menu */
+    margin-bottom: 50px; /* Espaçamento abaixo do menu */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    max-width: 100%; /* Garante que não exceda a largura da tela */
+}
+
+/* Estilo do menu */
+.menu {
+    display: flex; /* Usa flexbox para alinhar itens */
+    justify-content: center; /* Centraliza o menu horizontalmente */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Estilo dos links do menu com fonte OCR A Std */
+.menu a {
+    color: #f0f0f0; /* Cor do texto claro */
+    text-decoration: none; /* Remove sublinhado dos links */
+    margin: 0 15px; /* Margem horizontal de 15px */
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #00aaff
+}
+
+/* Posicionamento dos símbolos de tema e idioma */
+.symbols {
+    position: absolute; /* Posiciona no canto superior direito */
+    top: 10px; /* Alinha ao topo */
+    right: 20px; /* Alinha à direita */
+}
+
+.symbols span {
+    cursor: pointer; /* Indica que é clicável */
+    margin-left: 15px; /* Margem à esquerda dos símbolos */
+}
+
+/* Seção de início */
+.section {
+    position: relative; /* Para posicionar o banner dentro da seção */
+}
+
+/* Estilo da banner */
+.banner {
+    position: relative; /* Necessário para a sobreposição */
+    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    color: #f0f0f0; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    overflow: hidden; /* Garante que a sobreposição não ultrapasse o contêiner */
+}
+
+/* Sobreposição com fade */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fundo preto com opacidade 0.8 */
+    z-index: 1; /* Coloca a sobreposição acima da imagem */
+}
+
+/* Título dentro da banner */
+.banner h2 {
+    position: relative; /* Para garantir que o z-index funcione */
+    z-index: 2; /* Coloca o texto acima da sobreposição */
+    font-size: 36px; /* Tamanho do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Cor diferente para "TI" */
+.banner h2 span {
+    color: #00aaff; /* Cor azul para "TI" */
+}
+
+/* Botões dentro da banner */
+.banner .buttons {
+    position: relative; /* Para garantir que o z-index funcione */
+    z-index: 2; /* Coloca os botões acima da sobreposição */
+    text-align: center; /* Centraliza os botões */
+}
+
+.banner .buttons button {
+    background-color: #00aaff; /* Cor de fundo */
+    border: none; /* Remove borda padrão */
+    color: #f0f0f0; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 0 10px; /* Espaçamento horizontal entre botões */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.banner .buttons button:hover {
+    background-color: #007acc; /* Cor de fundo ao passar o mouse */
+}
+
+/* Container de Experiências */
+#experiencias {
+    padding: 20px;
+    background-color: #333; /* Fundo para contrastar com as barras */
+    color: white; /* Cor do texto para contraste */
+}
+
+/* Lista de empresas */
+.empresa-lista {
+    display: flex;
+    flex-direction: column; /* Coloca as logos uma acima da outra */
+    align-items: flex-start; /* Alinha à esquerda */
+    margin-right: 20px;
+}
+
+.empresa {
+    margin-bottom: 30px; /* Espaço entre logos */
+}
+
+.empresa img {
+    width: 50px; /* Tamanho fixo para as logos */
+    height: 50px; /* Tamanho fixo para as logos */
+}
+
+/* Detalhes da Experiência */
+.experiencias {
+    display: flex;
+    align-items: flex-start; /* Alinha ao topo */
+    position: relative; /* Adicionado para posicionamento do GIF */
+}
+
+/* Detalhes da Experiência */
+.detalhes-experiencia {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    flex-grow: 1;
+    color: black; /* Cor do texto */
+    display: flex;
+    flex-direction: column; /* Alinha itens em coluna */
+    gap: 10px; /* Espaçamento entre itens */
+}
+
+/* Estilos da tabela de experiências */
+.experiencia-detalhe {
+    margin-bottom: 20px;
+}
+
+#experiencias h2 {
+    padding-left: 80px; /* Ajuste o valor conforme necessário */
+    font-family: "Chakra Petch", sans-serif;
+}
+
+
+.empresa-nome {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.empresa-cargo {
+    font-size: 18px;
+    color: #555;
+}
+
+.barra-container {
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Largura total */
+    height: 30px;
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    }
+
+.barra {
+    height: 100%;
+    background-color: #00aaff;
+    width: 0;
+    transition: width 2s;
+}
+
+.tempo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o número de colunas conforme o tamanho da tela */
+    gap: 20px; /* Espaçamento entre habilidades */
+}
+
+.habilidade-item {
+    display: flex;
+    align-items: center;
+}
+
+.habilidade-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.habilidade-checkbox.checked {
+    background-color: white;
+}
+
+.habilidade-checkbox::after {
+    content: "X";
+    color: #00aaff;
+    display: none;
+}
+
+.habilidade-checkbox.checked::after {
+    display: block;
+}
+/* Estilo para o GIF de carregamento */
+#loading-gif {
+    position: absolute;
+    bottom: 0px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    z-index: 1; /* Garanta que ele esteja acima de outros elementos */
+}
