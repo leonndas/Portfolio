@@ -162,6 +162,10 @@ body {
     height: 50px; /* Tamanho fixo para as logos */
 }
 
+.empresa img:hover {
+    transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
+}
+
 /* Detalhes da Experiência */
 .experiencias {
     display: flex;
