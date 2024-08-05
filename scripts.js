@@ -33,14 +33,21 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(typeAndErase, delayBetweenLoops);
 });
 
-  // Código para o GIF de carregamento
-  const loadingGif = document.getElementById('loading-gif');
-  loadingGif.style.display = 'block'; // Mostra o GIF ao carregar a página
 
   const empresaElements = document.querySelectorAll('.empresa');
+  const detalhes = document.getElementById('detalhes-experiencia');
+
+
   empresaElements.forEach(empresa => {
       empresa.addEventListener('click', () => {
-          loadingGif.style.display = 'none'; // Esconde o GIF ao clicar em uma logo de empresa
+        // Remove a classe de logo clicada de todas as logos
+        empresaElements.forEach(el => el.classList.remove('empresa-clicada'));
+
+        // Adiciona a classe de logo clicada à logo clicada
+        empresa.classList.add('empresa-clicada');
+
+        // Mostra o box de detalhes da experiência
+        mostrarExperiencia(empresa.getAttribute('onclick').match(/'(\w+)'/)[1]);
       });
   });
 
@@ -60,6 +67,8 @@ languageSelect.addEventListener('click', () => {
     languageOptions.style.display = isDisplayed ? 'none' : 'block';
 });
 
+
+
 /* experiencias */
 
 const experiencias = {
@@ -67,13 +76,13 @@ const experiencias = {
         title: "Apple",
         position: "Suporte Técnico Bilíngue",
         period: "20/03/2020 - 10/08/2020",
-        skills: ["iCloud", "Diagnóstico de hardware", "Atualização de firmware", "iOS", "macOS", "watchOS", "Suporte de rede", "Conectividade"]
+        skills: ["iCloud", "Diagnóstico de hardware", "Atualização de firmware", "iOS", "macOS", "watchOS"]
     },
     google: {
         title: "Google",
         position: "Suporte Técnico Bilíngue",
         period: "15/03/2021 - 13/09/2021",
-        skills: ["Android", "Google Workspace", "Diagnóstico de bugs", "Google Drive", "Atualização de software"]
+        skills: ["Android", "Gmail", "Diagnóstico de bugs", "Google Drive", "Atualização de software", 'Play Store']
     },
     airbnb: {
         title: "Airbnb",
@@ -99,17 +108,11 @@ function mostrarExperiencia(empresa) {
     empresaCargo.className = 'empresa-cargo';
     empresaCargo.textContent = experiencia.position;
 
-    const barraContainer = document.createElement('div');
-    barraContainer.className = 'barra-container';
-
-    const barra = document.createElement('div');
-    barra.className = 'barra';
-    barraContainer.appendChild(barra);
-
+ // Cria e adiciona o elemento do tempo
     const tempo = document.createElement('div');
     tempo.className = 'tempo';
     tempo.textContent = experiencia.period;
-    barraContainer.appendChild(tempo);
+    
 
     const habilidades = document.createElement('div');
     habilidades.className = 'habilidades';
@@ -131,23 +134,16 @@ function mostrarExperiencia(empresa) {
         // Animação de preenchimento do checkbox
         setTimeout(() => {
             checkbox.classList.add('checked');
-        }, 500);
+        }, 600);
     });
 
     // Adiciona elementos ao contêiner de detalhes
     detalhes.appendChild(empresaNome);
     detalhes.appendChild(empresaCargo);
-    detalhes.appendChild(barraContainer);
     detalhes.appendChild(habilidades);
-
-    // Animação da barra de progresso
-    setTimeout(() => {
-        barra.style.width = `${Math.random() * 100}%`;
-    }, 100);
+    detalhes.appendChild(tempo);
 
     // Mostrar detalhes da experiência ao clicar
     detalhes.style.display = 'flex';
+    detalhes.style.opacity = '1'; // E ajuste a opacidade
 }
-
-// Inicialmente ocultar detalhes de experiência
-document.getElementById('detalhes-experiencia').style.display = 'none';
