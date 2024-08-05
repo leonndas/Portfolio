@@ -77,12 +77,13 @@ body {
 /* Seção de início */
 .section {
     position: relative; /* Para posicionar o banner dentro da seção */
+    margin-bottom: 50px; /* Adiciona espaço abaixo da seção */
 }
 
 /* Estilo da banner */
 .banner {
     position: relative; /* Necessário para a sobreposição */
-    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* imagem livre de banco de dados /*
     background-size: cover; /* Cobre toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
@@ -143,6 +144,14 @@ body {
     padding: 20px;
     background-color: #333; /* Fundo para contrastar com as barras */
     color: white; /* Cor do texto para contraste */
+    margin-bottom: 50px; /* Espaçamento abaixo da seção */
+}
+
+/* Container da lista de empresas e detalhes da experiência */
+.experiencias-container {
+    display: flex;
+    justify-content: flex-start; /* Alinha os elementos ao início */
+    align-items: flex-start; /* Alinha os elementos ao topo */
 }
 
 /* Lista de empresas */
@@ -150,7 +159,7 @@ body {
     display: flex;
     flex-direction: column; /* Coloca as logos uma acima da outra */
     align-items: flex-start; /* Alinha à esquerda */
-    margin-right: 20px;
+    margin-right: 20px; /* Espaçamento à direita das logos */
 }
 
 .empresa {
@@ -170,7 +179,6 @@ body {
 .experiencias {
     display: flex;
     align-items: flex-start; /* Alinha ao topo */
-    position: relative; /* Adicionado para posicionamento do GIF */
 }
 
 /* Detalhes da Experiência */
@@ -183,16 +191,21 @@ body {
     display: flex;
     flex-direction: column; /* Alinha itens em coluna */
     gap: 10px; /* Espaçamento entre itens */
+    display: none; /* Inicialmente oculto */
+    position: relative; /* Necessário para posicionamento absoluto dos filhos */
+    min-height: 230px; /* Altura mínima para garantir espaço para o tempo */
 }
+
 
 /* Estilos da tabela de experiências */
 .experiencia-detalhe {
     margin-bottom: 20px;
 }
 
+/* paragrafo do experiencia */
 #experiencias h2 {
-    padding-left: 80px; /* Ajuste o valor conforme necessário */
     font-family: "Chakra Petch", sans-serif;
+    font-size: 30px;
 }
 
 
@@ -206,41 +219,24 @@ body {
     color: #555;
 }
 
-.barra-container {
-    background-color: #444;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    width: 100%; /* Largura total */
-    height: 30px;
-    display: flex;
-    align-items: center; /* Centraliza o texto verticalmente */
-    }
-
-.barra {
-    height: 100%;
-    background-color: #00aaff;
-    width: 0;
-    transition: width 2s;
-}
-
 .tempo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    bottom: 230px;
+    right: 15px;
+    color: #555; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
 .habilidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o número de colunas conforme o tamanho da tela */
-    gap: 20px; /* Espaçamento entre habilidades */
+
 }
 
 .habilidade-item {
     display: flex;
     align-items: center;
+    margin-top: 30px; /* espaçamento */
 }
 
 .habilidade-checkbox {
@@ -266,14 +262,4 @@ body {
 
 .habilidade-checkbox.checked::after {
     display: block;
-}
-/* Estilo para o GIF de carregamento */
-#loading-gif {
-    position: absolute;
-    bottom: 0px; /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    z-index: 1; /* Garanta que ele esteja acima de outros elementos */
 }
