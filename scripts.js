@@ -34,8 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+    // Seleção das empresas e do GIF
   const empresaElements = document.querySelectorAll('.empresa');
   const detalhes = document.getElementById('detalhes-experiencia');
+  const gifElement = document.getElementById('click-gif');
 
 
   empresaElements.forEach(empresa => {
@@ -47,9 +49,15 @@ document.addEventListener("DOMContentLoaded", function() {
         empresa.classList.add('empresa-clicada');
 
         // Mostra o box de detalhes da experiência
-        mostrarExperiencia(empresa.getAttribute('onclick').match(/'(\w+)'/)[1]);
-      });
-  });
+        const empresaID = empresa.getAttribute('onclick').match(/'(\w+)'/)[1];
+        mostrarExperiencia(empresaID);
+
+     // Oculta o GIF ao clicar em qualquer logo
+     if (gifElement) {
+        gifElement.style.display = 'none'; // Esconde o GIF
+    }
+});
+});
 
 // Troca de tema
 const themeToggle = document.querySelector('.theme-toggle');
@@ -66,8 +74,6 @@ languageSelect.addEventListener('click', () => {
     const isDisplayed = languageOptions.style.display === 'block';
     languageOptions.style.display = isDisplayed ? 'none' : 'block';
 });
-
-
 
 /* experiencias */
 
@@ -88,7 +94,7 @@ const experiencias = {
         title: "Airbnb",
         position: "Suporte Técnico Trilíngue T2",
         period: "02/05/2022 - 29/06/2023",
-        skills: ["Análise de logs", "Relatório de bugs", "Auditoria", "Monitoramento de fraude", "Manutenção de base de dados", "Controle de acesso"]
+        skills: ["Análise de logs", "Relatório de bugs", "Auditoria", "Monitoramento de fraude", "Manutenção de base de dados", "Autenticação"]
     }
 };
 
