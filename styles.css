@@ -145,40 +145,85 @@ body {
     background-color: #333; /* Fundo para contrastar com as barras */
     color: white; /* Cor do texto para contraste */
     margin-bottom: 50px; /* Espaçamento abaixo da seção */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100px;
 }
 
 /* Container da lista de empresas e detalhes da experiência */
 .experiencias-container {
-    display: flex;
     justify-content: flex-start; /* Alinha os elementos ao início */
     align-items: flex-start; /* Alinha os elementos ao topo */
 }
 
 /* Lista de empresas */
 .empresa-lista {
+    margin-left: 10px;
     display: flex;
-    flex-direction: column; /* Coloca as logos uma acima da outra */
+    flex-direction: flex; /* Coloca as logos uma acima da outra */
+    gap: 100px;
     align-items: flex-start; /* Alinha à esquerda */
     margin-right: 20px; /* Espaçamento à direita das logos */
 }
 
 .empresa {
     margin-bottom: 30px; /* Espaço entre logos */
+    position: relative; /* Necessário para que o posicionamento absoluto funcione */
+    display: inline-block;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Torna a div clicável */
 }
 
 .empresa img {
-    width: 50px; /* Tamanho fixo para as logos */
-    height: 50px; /* Tamanho fixo para as logos */
+    max-width: 100px; /* Tamanho fixo para as logos */
+    height: auto;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+/* Container da logo da Google */
+.empresa-google {
+    position: relative; /* Necessário para posicionar o GIF relativo a este contêiner */
+    display: inline-block; /* Para que o tamanho do contêiner corresponda ao conteúdo */
+}
+
+
+/* Contêiner do GIF */
+.gif-container {
+    position: absolute;
+    bottom: -20px; /* Ajuste para posicionar abaixo da logo */
+    right: -10px; /* Ajuste para posicionar à direita da logo */
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Especificidade máxima */
+body div.gif-container img.click-gif {
+    width: 45px !important; /* Força o tamanho com !important */
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
 }
 
 .empresa img:hover {
     transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
+
 }
 
-/* Detalhes da Experiência */
+/* Detalhes da Experiência (do h2 ate final dos detalhes */
 .experiencias {
+    position: relative; /* Garante que os elementos filhos possam ser posicionados relativamente a este contêiner */
+    padding: 20px;
     display: flex;
-    align-items: flex-start; /* Alinha ao topo */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 /* Detalhes da Experiência */
@@ -206,6 +251,8 @@ body {
 #experiencias h2 {
     font-family: "Chakra Petch", sans-serif;
     font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 
