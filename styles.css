@@ -127,6 +127,11 @@ body { /*1C1C1C */
     color: #00aaff; /* Cor azul para "TI" */
 }
 
+.banner a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white;
+}
+
 /* Botões dentro da banner */
 .banner .buttons {
     position: relative; /* Para garantir que o z-index funcione */
@@ -543,7 +548,7 @@ body div.gif-container img.click-gif {
 
 /* cards pra projetos*/
 
-.card {
+.projects {
     width: 100%;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -558,11 +563,11 @@ body div.gif-container img.click-gif {
     transition: all .5s;
 }
 
-.card:hover {
+.projects:hover {
     background-image: linear-gradient(#0086c9, #003968);
 }
 
-.card .img {
+.projects .img {
     width: 100%;
     min-width: 600px;
     display: flex;
@@ -578,7 +583,7 @@ body div.gif-container img.click-gif {
     opacity: .7;
 }
 
-.card .img span {
+.projects .img span {
     text-transform: uppercase;
     font-size: 26px;
     font-style: italic;
@@ -587,18 +592,18 @@ body div.gif-container img.click-gif {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra no texto */
 }
 
-.card:hover .img {
+.projects:hover .img {
     width: 100%;
     opacity: 1;
     padding: 20px;
 }
 
-.card:hover .img span {
+.projects:hover .img span {
     font-size: 32px;
     
 }
 
-.card .content {
+.project {
     padding: 0px 20px;
     height: 0;
     opacity: 0;
@@ -609,27 +614,28 @@ body div.gif-container img.click-gif {
     transform: translateY(30px);
 }
 
-.card:hover .content {
+.projects:hover .project {
     height: 260px;
     padding: 20px;
     opacity: 1;
     transform: translateY(0);
 }
 
-.card .content p {
+.project p {
     margin: 0;
 }
 
 
 /* titulo do content*/
-.card .content .title {
+.prj-title {
     font-size: 20px;
     font-weight: 600;
-    font-family: "Source Code Pro", monospace;;
+    font-family: "Source Code Pro", monospace;
 }
 
+
 /* conteudo do content (kkkk pleonasmo) */
-.card .content .desc {
+.prj-desc {
     font-size: 14px;
     font-weight: 100;
     opacity: .8;
@@ -638,16 +644,44 @@ body div.gif-container img.click-gif {
 }
 
 /* setinha que vira */
-.card .arrow {
+.arrow {
     padding: 15px;
     transform: rotate(-180deg);
     transition: all .5s;
 }
 
-.card:hover .arrow {
+.projects:hover .arrow {
     transform: rotate(0);
 }
 
-.card .arrow span {
+.projects .arrow span {
     font-size: 24px;
+}
+
+/* contact me*/
+
+.contact h2 {
+    margin-bottom: 40px;
+    margin-top: 120px;
+    font-family: "Kanit", sans-serif;
+    margin-left: 75px;
+}
+
+.forms {
+    font-family: "VT323", monospace;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 60px;
+}
+
+.submit button {
+    background-color: #00aaff; /* Cor de fundo */
+    border: none; /* Remove borda padrão */
+    color: #f0f0f0; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 0 10px; /* Espaçamento horizontal entre botões */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
 }
