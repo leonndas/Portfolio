@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setTimeout(typeAndErase, delayBetweenLoops);
-});
+
 
 
     // Seleção das empresas e do GIF
@@ -152,4 +152,46 @@ function mostrarExperiencia(empresa) {
     // Mostrar detalhes da experiência ao clicar
     detalhes.style.display = 'flex';
     detalhes.style.opacity = '1'; // E ajuste a opacidade
+}
+
+// animação da barra habilidades//
+const progressBars = document.querySelectorAll('.progress');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progress = entry.target;
+                const percentage = progress.getAttribute('data-percentage');
+                const totalBlocks = Math.ceil(percentage / 10); // Divida a barra em blocos
+                for (let i = 0; i < totalBlocks; i++) {
+                    const block = document.createElement('div');
+                    progress.appendChild(block);
+                }
+                progress.style.setProperty('--progress-width', `${totalBlocks * 22}px`); // 20px largura + 2px de margin
+            }
+        });
+    });
+
+    progressBars.forEach(bar => observer.observe(bar));
+});
+
+// abas interativas pra habilidades//
+
+function openTab(tabName) {
+    var i, tabContent, tabButtons;
+
+    // Esconder todos os conteúdos
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    // Remover classe ativa de todos os botões
+    tabButtons = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+    }
+
+    // Mostrar o conteúdo da aba clicada e adicionar a classe ativa ao botão
+    document.getElementById(tabName).style.display = "flex";
+    event.currentTarget.className += " active";
 }
