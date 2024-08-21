@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Nome animado como logo -->
-    <div class="logo-container">
+    <div id="main" class="logo-container">
         <div class="logo" id="logo">Leon Santiago</div>
     </div>
     
@@ -23,37 +23,27 @@
         <!-- Ícones para trocar cor e selecionar idioma -->
         <div class="symbols">
             <span class="theme-toggle">🌓</span>
-        <!-- implementar outros idiomas dps
-            <span class="language-select">🌐</span>
-            <div class="language-options" style="display: none;">
-                <a href="?lang=en">English</a>
-                <a href="?lang=es">Español</a>
-                <a href="?lang=pt">Português</a>
-            </div>
-        -->
         </div>
         
         <!-- Menu de navegação -->
         <div class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#exp">Experiências</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
+            <a href="#main">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#blink">Habilidades</a>
+            <a href="#blink">Projetos</a>
+            <a href="#contact">Contato</a>
         </div>
     </div>
 
     <!-- Seção de início -->
-    <section id="inicio" class="section">
+    <section class="section">
         <div class="banner">
             <!-- Título com cor diferenciada para "TI" -->
             <h2>Soluções em <span>TI</span></h2>
         
             <!-- Botões com bordas arredondadas -->
             <div class="buttons">
-                <button>Download CV</button>
-                <button>Entre em contato</button>
+                <button><a href="imgs/cv Leon S.pdf"> Download CV</button></a>
             </div>
         </div>
     </section>
@@ -64,11 +54,11 @@
         <div class="experiencias-container">
             <!-- Lista de Empresas -->
             <div class="empresa-lista" id="empresa-lista"> 
-                <div id="apple" class="empresa" onclick="mostrarExperiencia('apple')">
+                <div id="apple" class="empresa">
                     <img src="imgs/ap.png" alt="Apple Logo" class="empresa-logo">
                 </div>
 
-                <div class="empresa" onclick="mostrarExperiencia('google')">
+                <div id="google" class="empresa">
                     <img src="imgs/go.png" alt="Google Logo" id="google" class="empresa-logo">
                     
                         <!-- Adicionando o GIF aqui -->
@@ -77,7 +67,7 @@
                     </div>
                 </div>
 
-                <div id="airbnb" class="empresa" onclick="mostrarExperiencia('airbnb')">
+                <div id="airbnb" class="empresa">
                     <img src="imgs/ab.png" alt="Airbnb Logo" class="empresa-logo">
                 </div>
         </div>
@@ -88,7 +78,7 @@
     </section>
     
     <!-- Seção sobre mim -->
-    <section class="sobre">
+    <section id="about" class="sobre">
 
         <div class="foto">
             <!-- Espaço para foto -->
@@ -105,7 +95,7 @@
                 </p>
             </div>
 
-            <div class="blink-gif">
+            <div id="blink" class="blink-gif">
                 <img src="imgs/bl.gif" alt="blinking gif cursor"> 
             </div>
         </div>
@@ -186,14 +176,14 @@
 
         <!-- projetos -->
         <div class="tab-content" id="projects" style="display: none;">
-            <div class="card">
+            <div class="projects">
                 <div class="img">
                     <span>Software de Gerenciamento de Funcionários<span>
                 </div>
 
-                <div class="content">
-                    <span class="title">Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link"> GitHub </a></span>
-                    <p class="desc">Conta com o seguinte menu de opções:
+                <div class="project">
+                    <span class="prj-title">Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link"> GitHub </a></span>
+                    <p class="prj-desc">Conta com o seguinte menu de opções:
                         <br><br>
                         1.	Cadastrar Funcionário <br>
                         2.	Consultar Funcionário <br>
@@ -211,7 +201,35 @@
                 </div>
             </div>
         </div>
-
     </section>
+    
+    <!-- contact me (apenas visual ja que git nao salva dados)-->
+    <section>
+        <div id="contact" class="contact">
+            <h2>Entre em contato</h2>
+
+            <div class="forms">
+                <div class="name">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="description">
+                    <label for="description">Descrição:</label><br>
+                    <textarea id="description" name="description" rows="10" cols="40"></textarea>
+                </div>
+
+                <div class="submit">
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
