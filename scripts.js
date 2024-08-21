@@ -32,9 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(typeAndErase, delayBetweenLoops);
 
+// Troca de tema
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+});
 
 
-    // Seleção das empresas e do GIF
+    // Seleção das empresas 
   const empresaElements = document.querySelectorAll('.empresa');
   const detalhes = document.getElementById('detalhes-experiencia');
   const gifElement = document.getElementById('click-gif');
@@ -48,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Adiciona a classe de logo clicada à logo clicada
         empresa.classList.add('empresa-clicada');
 
-        // Mostra o box de detalhes da experiência
-        const empresaID = empresa.getAttribute('onclick').match(/'(\w+)'/)[1];
+        // Obtém o ID da empresa a partir do atributo ID do elemento clicado
+        const empresaID = empresa.getAttribute('id');
         mostrarExperiencia(empresaID);
 
      // Oculta o GIF ao clicar em qualquer logo
@@ -59,21 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 });
 
-// Troca de tema
-const themeToggle = document.querySelector('.theme-toggle');
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-});
-
-// Alternância de opções de idioma
-const languageSelect = document.querySelector('.language-select');
-const languageOptions = document.querySelector('.language-options');
-
-languageSelect.addEventListener('click', () => {
-    const isDisplayed = languageOptions.style.display === 'block';
-    languageOptions.style.display = isDisplayed ? 'none' : 'block';
-});
 
 /* experiencias */
 
