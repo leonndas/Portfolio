@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leon's Portfolio</title>
+    <script src="scripts.js" defer></script> 
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Pixelify+Sans:wght@412&family=Roboto:ital,wght@1,700&family=VT323&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Honk&family=New+Amsterdam&family=Patrick+Hand&family=Pixelify+Sans:wght@412&family=Roboto:ital,wght@1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Nome animado como logo -->
@@ -15,24 +16,28 @@
         <div class="logo" id="logo">Leon Santiago</div>
     </div>
     
+
+     
     <!-- Caixa do menu -->
     <div class="menu-container">
         <!-- Ícones para trocar cor e selecionar idioma -->
         <div class="symbols">
             <span class="theme-toggle">🌓</span>
+        <!-- implementar outros idiomas dps
             <span class="language-select">🌐</span>
             <div class="language-options" style="display: none;">
                 <a href="?lang=en">English</a>
                 <a href="?lang=es">Español</a>
                 <a href="?lang=pt">Português</a>
             </div>
+        -->
         </div>
-
+        
         <!-- Menu de navegação -->
         <div class="menu">
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
-            <a href="#formacao">Formação</a>
+            <a href="#exp">Experiências</a>
             <a href="#habilidades">Habilidades</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
@@ -59,24 +64,21 @@
         <div class="experiencias-container">
             <!-- Lista de Empresas -->
             <div class="empresa-lista" id="empresa-lista"> 
-                <div class="empresa" onclick="mostrarExperiencia('apple')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple Logo" class="empresa-logo">
+                <div id="apple" class="empresa" onclick="mostrarExperiencia('apple')">
+                    <img src="/imgs/ap.png" alt="Apple Logo" class="empresa-logo">
                 </div>
 
                 <div class="empresa" onclick="mostrarExperiencia('google')">
-                    <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" alt="Google Logo" class="empresa-logo">
+                    <img src="imgs/go.png" alt="Google Logo" id="google" class="empresa-logo">
                     
                         <!-- Adicionando o GIF aqui -->
                     <div class="gif-container">
                         <img src="https://i.giphy.com/fIfB3luItTEID8qDgD.webp" alt="Clique aqui!" class="click-gif" id="click-gif">
                     </div>
-
-                
                 </div>
 
-        
-                <div class="empresa" onclick="mostrarExperiencia('airbnb')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Airbnb Logo" class="empresa-logo">
+                <div id="airbnb" class="empresa" onclick="mostrarExperiencia('airbnb')">
+                    <img src="/imgs/ab.png" alt="Airbnb Logo" class="empresa-logo">
                 </div>
         </div>
             <!-- Detalhes da Experiência -->
@@ -86,28 +88,130 @@
     </section>
     
     <!-- Seção sobre mim -->
-    <section id="sobre" class="section">
-        <h2>O Leon</h2>
-        <h3 class="roboto-bold-italic">Backend Developer Jr. & Suporte Técnico</h3>
-        <div>
+    <section class="sobre">
+
+        <div class="foto">
             <!-- Espaço para foto -->
-            <img src="sua_foto.jpg" alt="Foto de Leon Santiago" style="max-width: 200px; height: auto;">
-            <!-- Texto sobre você -->
-            <p>Aqui vai um texto sobre você.</p>
+            <img src="/imgs/img.png" alt="Foto de Leon Santiago" style="max-width: 200px; height: auto;">
+            
+            <div class="text">
+                <p> E aí, prazer! <br>
+                <br><br>
+                    Meu nome é Leon Santiago Gomes. Sou de 2000, e nasci e cresci em Guarulhos, segunda maior cidade do estado de São Paulo, no bairro do Pimentas. 
+                <br><br><br>
+                    Atualmente, moro no centro de São Paulo e curso Desenvolvimento de Sistemas. Quando não estou estudando ou trabalhando, estou jogando ou treinando na academia.
+                <br><br><br>
+                    Os jogos que mudaram minha vida são: o RuneScape de 2007, Children of Morta, The Sims 2: Castaway, Far Cry 2 e Baldur's Gate 3.
+                </p>
+            </div>
+
+            <div class="blink-gif">
+                <img src="/imgs/bl.gif" alt="blinking gif cursor"> 
+            </div>
         </div>
-        <div>
+
+        <div class="titulos">
+            <h1>O Leon</h1>
+            <h2 class="roboto-bold-italic">Backend Developer Jr. <span>&</span> Suporte Técnico</h2>  
+        </div>
+        
+        
+        <div class="links">
             <!-- Links para redes sociais -->
-            <a href="https://instagram.com/leonndas">Instagram</a>
-            <a href="https://linkedin.com/leon-santiago-gomes-45490715a/">LinkedIn</a>
-            <a href="https://github.com/leonndas">GitHub</a>
+            <a href="https://instagram.com/leonndas">
+                <img src="/imgs/ig.png" alt="Instagram">
+            </a>
+            <a href="https://linkedin.com/leon-santiago-gomes-45490715a/">
+                <img src="/imgs/ld.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/leonndas">
+                <img src="/imgs/gt.png" alt="Github">
+            </a>
         </div>
-    </section>
-    
-    <!-- Seção de formação -->
-    <section id="formacao" class="section">
-        <h2>Formação</h2>
     </section>
 
-    <script src="scripts.js"></script>
+    
+    
+    <!-- Seção de formação -->
+    <section id="hab-container">
+    <!-- abas interativas pra habilidades -->
+        <div class="tabs"> <!-- botoes -->
+            <button class="tab-button active" onclick="openTab('languages')">Linguagens</button>
+            <button class="tab-button" onclick="openTab('idioms')">Idiomas</button>
+            <button class="tab-button" onclick="openTab('projects')">Projetos</button>
+        </div>
+
+        <!-- conteudo -->
+            <div class="tab-content" id="languages">
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="bar" style="--percentage: 90%;"></div>
+                </div>
+            
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar" style="--percentage: 90%;"></div>
+                </div>
+            
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar" style="--percentage: 62%;"></div>
+                </div>
+            
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="bar" style="--percentage: 55%;"></div>
+                </div>
+        
+
+            </div>
+
+            <!-- cursos -->
+            <div class="tab-content" id="idioms" style="display: none;">
+                <div class="skill">
+                    <span>Inglês</span>
+                    <div class="bar" style="--percentage: 100%;"></div>
+                </div>
+            
+                <div class="skill">
+                    <span>Português</span>
+                    <div class="bar" style="--percentage: 100%;"></div>
+                </div>
+            
+                <div class="skill">
+                    <span>Espanhol</span>
+                    <div class="bar" style="--percentage: 100%;"></div>
+                </div>
+            </div>
+
+        <!-- projetos -->
+        <div class="tab-content" id="projects" style="display: none;">
+            <div class="card">
+                <div class="img">
+                    <span>Software de Gerenciamento de Funcionários<span>
+                </div>
+
+                <div class="content">
+                    <span class="title">Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link"> GitHub </a></span>
+                    <p class="desc">Conta com o seguinte menu de opções:
+                        <br><br>
+                        1.	Cadastrar Funcionário <br>
+                        2.	Consultar Funcionário <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;2.a	Consultar Todos <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;2.b	Consultar por Id <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;2.c Consultar por setor <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;2.d Retornar ao menu <br>
+                        3.	Remover Funcionário <br>
+                        4.	Encerrar Programa <br>
+                        </p>
+                </div>
+
+                <div class="arrow">
+                    <span>&#8673;</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 </html>
