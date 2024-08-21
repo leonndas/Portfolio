@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 /* Estilos básicos para a página */
-body {
-    background-color: #1C1C1C; /* Fundo */
+body { /*1C1C1C */
+    background-color: #1f2429; /* Fundo */
     color: #f0f0f0; /* Texto claro */
     font-family: 'Arial', sans-serif; /* Fonte padrão */
     margin: 0; /* Remove margem padrão do body */
@@ -14,23 +16,24 @@ body {
 .logo-container {
     text-align: center; /* Centraliza o texto horizontalmente */
     margin: 30px 0; /* Margem vertical de 20px */
-    height: 36px; /* Altura fixa para evitar alterações no layout */
+    height: 46px; /* Altura fixa para evitar alterações no layout */
     overflow: hidden; /* Garante que o texto não ultrapasse o contêiner */
 }
 
 .logo {
     font-family: "VT323", monospace;
-    font-size: 36px; /* Tamanho da fonte */
+    font-size: 46px; /* Tamanho da fonte */
     color: #f0f0f0; /* Cor do texto */
     white-space: nowrap; /* Impede quebra de linha */
     display: inline-block; /* Impede quebra de linha e permite definir tamanho */
+    
 }
 
 
 
 /* Contêiner do menu */
 .menu-container {
-    background-color: #1a1a3b; /* Cor de fundo para o menu */
+    background-color: #0e2a3b6c; /* Cor de fundo para o menu */
     padding: 10px 0; /* Espaçamento interno */
     width: 100%; /* Largura total */
     position: relative; /* Necessário para posicionar os ícones no canto superior direito */
@@ -49,13 +52,15 @@ body {
     box-sizing: border-box; /* Inclui padding na largura total */
 }
 
-/* Estilo dos links do menu com fonte OCR A Std */
+/* Estilo dos links do menu */
 .menu a {
     color: #f0f0f0; /* Cor do texto claro */
     text-decoration: none; /* Remove sublinhado dos links */
     margin: 0 15px; /* Margem horizontal de 15px */
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 600;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    
 }
 
 .menu a:hover {
@@ -83,13 +88,14 @@ body {
 /* Estilo da banner */
 .banner {
     position: relative; /* Necessário para a sobreposição */
-    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* imagem livre de banco de dados /*
+    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* imagem livre de banco de dados */
     background-size: cover; /* Cobre toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     color: #f0f0f0; /* Cor do texto */
     padding: 20px; /* Espaçamento interno */
     overflow: hidden; /* Garante que a sobreposição não ultrapasse o contêiner */
+    margin-bottom: 80px;
 }
 
 /* Sobreposição com fade */
@@ -110,7 +116,10 @@ body {
     z-index: 2; /* Coloca o texto acima da sobreposição */
     font-size: 36px; /* Tamanho do texto */
     text-align: center; /* Centraliza o texto */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Sombra que segue as bordas do ícone */
+    font-family: "Kanit", sans-serif;
+    
 }
 
 /* Cor diferente para "TI" */
@@ -151,6 +160,7 @@ body {
     justify-content: center;
     padding: 20px;
     min-height: 100px;
+    
 }
 
 /* Container da lista de empresas e detalhes da experiência */
@@ -169,6 +179,7 @@ body {
     margin-right: 20px; /* Espaçamento à direita das logos */
 }
 
+/* logos exp*/
 .empresa {
     margin-bottom: 30px; /* Espaço entre logos */
     position: relative; /* Necessário para que o posicionamento absoluto funcione */
@@ -178,36 +189,47 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer; /* Torna a div clicável */
+    filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5)); /* Sombra que segue as bordas do ícone */
+    
 }
 
-.empresa img {
-    max-width: 100px; /* Tamanho fixo para as logos */
+.empresa img,
+.empresa-google img,
+#apple img,
+#airbnb img {
+    width: auto;
+    height: 150px; /* Tornando-as quadradas */
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    gap: 10px;
+}
+
+/* img da airbnb é diferente*/
+#airbnb img {
+    width: 100px;
     height: auto;
-    cursor: pointer; /* Indica que é clicável */
-}
+    margin-top: 25px;
 
-/* Container da logo da Google */
-.empresa-google {
-    position: relative; /* Necessário para posicionar o GIF relativo a este contêiner */
-    display: inline-block; /* Para que o tamanho do contêiner corresponda ao conteúdo */
 }
-
 
 /* Contêiner do GIF */
 .gif-container {
     position: absolute;
-    bottom: -20px; /* Ajuste para posicionar abaixo da logo */
-    right: -10px; /* Ajuste para posicionar à direita da logo */
+    bottom: 0px; /* Ajuste para posicionar abaixo da logo */
+    right: 0px; /* Ajuste para posicionar à direita da logo */
     pointer-events: none;
     z-index: 10;
+    
 }
 
 /* Especificidade máxima */
 body div.gif-container img.click-gif {
-    width: 45px !important; /* Força o tamanho com !important */
-    height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
+    width: 45px; 
+    height: auto;
+    max-width: none;
+    max-height: none;
+    
 }
 
 .empresa img:hover {
@@ -249,12 +271,13 @@ body div.gif-container img.click-gif {
 
 /* paragrafo do experiencia */
 #experiencias h2 {
-    font-family: "Chakra Petch", sans-serif;
-    font-size: 30px;
+    font-family: "Kanit", sans-serif;
+    font-size: 32px;
     text-align: center;
     margin-bottom: 40px;
-}
+    color: #ffffff;
 
+}
 
 .empresa-nome {
     font-size: 24px;
@@ -309,4 +332,322 @@ body div.gif-container img.click-gif {
 
 .habilidade-checkbox.checked::after {
     display: block;
+}
+
+/* espaço SOBRE (foto) */
+
+.sobre {  /* container pai */ 
+    display: flex;
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    align-items: flex-start; /* Alinha os itens ao topo verticalmente */
+    justify-content: flex-start; /* Alinha a foto e os títulos à esquerda */
+    gap: 10px; /* Espaço entre os elementos */
+    width: 100%; /* Ocupa toda a largura da página */
+    position: relative; /* Para posicionar os links dentro deste contêiner */
+    margin-bottom: 150px;
+    margin-top: 100px;
+    
+}
+
+/* container */
+.titulos {
+    display: flex;
+    flex-direction: column; /* Para empilhar o h1 e h2 verticalmente */
+    justify-content: center; /* Alinha verticalmente os títulos no centro */
+    width: 250%; /* Deixa a titulos ocupar o espaço restante */
+    margin-right: 200px;
+
+}
+
+/* O LEON */
+.titulos h1 {
+    margin: 0; /* Remove margens extras */
+    font-size: 64px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 20px;
+    font-family: "Honk", system-ui;
+}
+
+/* backend... */
+.titulos h2 {
+    margin: 0; /* Remove margens extras */
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-family: "Source Code Pro", monospace;
+}
+
+/* Cor diferente para "&" */
+.titulos h2 span {
+    color: #00aaff; /* Cor azul para "TI" */
+}
+
+.links {
+    position: absolute; /* Fixa o posicionamento dentro do contêiner */
+    right: 0; /* Alinha à direita da página */
+    top: 0; /* Alinha ao topo da seção */
+    display: flex;
+    flex-direction: column; /* Mantém os links empilhados verticalmente */
+    align-items: flex-end; /* Alinha os links à direita */
+    gap: 20px; /* Espaço entre os links */
+}
+
+/* Ajuste no tamanho das imagens dentro de .links */
+.links img {
+    width: 80px; /* Largura fixa */
+    height: 80px; /* Altura fixa */
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5)); /* Sombra que segue as bordas do ícone */
+}
+
+.text {
+    min-width: 350%;
+    margin-top: 50px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    position: relative; /* Para que o GIF seja posicionado em relação a .text */
+    width: 250%;
+    padding-left: 40px; /* Espaço à esquerda para o GIF */
+}
+
+/* gif de digitando...*/
+.blink-gif img {
+    position: relative; /* Permite posicionar o GIF no início do texto */
+    left: 1; /* Alinha o GIF à esquerda do .text */
+    width: 80px; /* Tamanho do GIF */
+}
+
+
+/* abas interativas pra habilidades */
+#hab-container { 
+    background-color: #333;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para as abas */
+.tab-button {
+    font-family: "Source Code Pro", monospace;
+    border: none;
+    width: 197px;
+    flex: 1; /* Faz as abas ocuparem o mesmo espaço */
+    border-radius: 8px 8px 0px 0px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color .3s ease;
+    text-align: center;
+}
+
+/* Estilo para abas ativas */
+.tab-button.active {
+    background-color: #242323;
+}
+
+/* Estilo para o conteúdo das abas */
+.tab-content {
+    background: #242323;
+    padding: 20px;   
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* Espaçamento entre os elementos */
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+ }
+
+
+
+/* barra de carregamento habilidades  */
+.skill {
+    padding: 10px;
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    margin-bottom: 10px; /* Espaçamento entre as linhas */
+    
+
+}
+
+.skill span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.bar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 200px;
+    height: 4px;
+    background: white;
+    border-radius: 50px;
+    
+}
+
+.bar::before {
+    content: '';
+    position: absolute;
+    width: var(--percentage);
+    height: 100%;
+    background: #00aaff;
+    transform-origin: left;
+    animation: animated-bar 2s linear forwards;
+    border-radius: 50px;
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #00aaff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #00aaff;
+    animation: animated-dot 2s linear forwards;
+}
+
+@keyframes animated-bar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--percentage);
+    }
+}
+
+@keyframes animated-dot {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(var(--percentage) - 10px);
+        box-shadow: 0 0 0 3px #0bec7c22,
+        0 0 0 0px #0bec7c22,
+        0 0 10px #0b87ec,
+        0 0 20px #0bb7ec,
+        0 0 30px #0b99ec;
+    }
+}
+
+/* cards pra projetos*/
+
+.card {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#333, #333);
+    transition: all .5s;
+}
+
+.card:hover {
+    background-image: linear-gradient(#0086c9, #003968);
+}
+
+.card .img {
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    background-image: url("/imgs/proj1.png");
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .7;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-style: italic;
+    transition: all .5s;
+    font-family: "VT323", monospace;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+
+.card:hover .img {
+    width: 100%;
+    opacity: 1;
+    padding: 20px;
+}
+
+.card:hover .img span {
+    font-size: 32px;
+    
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 260px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+
+/* titulo do content*/
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Source Code Pro", monospace;;
+}
+
+/* conteudo do content (kkkk pleonasmo) */
+.card .content .desc {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+    font-family: "Kanit", sans-serif;
+}
+
+/* setinha que vira */
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
 }
