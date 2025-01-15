@@ -185,4 +185,9 @@ function openTab(tabName) {
     // Mostrar o conteúdo da aba clicada e adicionar a classe ativa ao botão
     document.getElementById(tabName).style.display = "flex";
     event.currentTarget.className += " active";
+
+    
+
+
 }
+
