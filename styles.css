@@ -40,11 +40,14 @@ body { /*1C1C1C */
     margin-bottom: 50px; /* Espaçamento abaixo do menu */
     box-sizing: border-box; /* Inclui padding e borda na largura total */
     max-width: 100%; /* Garante que não exceda a largura da tela */
+    display: flex; /* deixa ele em linha reta pra mobile*/
+    justify-content: center;
 }
 
 /* Estilo do menu */
 .menu {
     display: flex; /* Usa flexbox para alinhar itens */
+    flex-wrap: nowrap; /* Garante que os itens não quebrem para a linha seguinte */
     justify-content: center; /* Centraliza o menu horizontalmente */
     align-items: center; /* Alinha itens verticalmente ao centro */
     padding: 10px 20px; /* Espaçamento interno */
