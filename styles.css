@@ -8,7 +8,6 @@ body { /*1C1C1C */
     margin: 0; /* Remove margem padrão do body */
     padding: 0; /* Remove padding padrão do body */
     position: relative; /* Necessário para posicionar elementos absolutamente dentro do body */
-    padding: 20px; /* Adiciona espaçamento ao redor da página */
     box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
 }
 
@@ -33,7 +32,7 @@ body { /*1C1C1C */
 
 /* Contêiner do menu */
 .menu-container {
-    background-color: #0e2a3b6c; /* Cor de fundo para o menu */
+    background-color: #2a3c476c; /* Cor de fundo para o menu */
     padding: 10px 0; /* Espaçamento interno */
     width: 100%; /* Largura total */
     position: relative; /* Necessário para posicionar os ícones no canto superior direito */
@@ -424,7 +423,6 @@ body div.gif-container img.click-gif {
 #hab-container { 
     background-color: #333;
     width: 100%;
-    max-width: 900px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -546,142 +544,135 @@ body div.gif-container img.click-gif {
     }
 }
 
-/* cards pra projetos*/
 
-.projects {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    background-image: linear-gradient(#333, #333);
-    transition: all .5s;
-}
-
-.projects:hover {
-    background-image: linear-gradient(#0086c9, #003968);
-}
-
-.projects .img {
-    width: 100%;
-    min-width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
-    background-image: url("imgs/proj1.png");
-    background-size: cover;
-    background-position: center;
-    transition: all .5s;
-    z-index: 2;
-    position: relative;
-    opacity: .7;
-}
-
-.projects .img span {
-    text-transform: uppercase;
-    font-size: 26px;
-    font-style: italic;
-    transition: all .5s;
-    font-family: "VT323", monospace;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra no texto */
-}
-
-.projects:hover .img {
-    width: 100%;
-    opacity: 1;
-    padding: 20px;
-}
-
-.projects:hover .img span {
-    font-size: 32px;
+/* Geral dos projetos */
+/* Estilo geral da seção */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    background-color: #242323;
     
 }
 
-.project {
-    padding: 0px 20px;
-    height: 0;
-    opacity: 0;
-    transition: all .5s;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    transform: translateY(30px);
+/* Card de cada projeto */
+.project-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.projects:hover .project {
-    height: 260px;
-    padding: 20px;
-    opacity: 1;
-    transform: translateY(0);
+.project-card:hover {
+    transform: scale(1.05);
 }
 
-.project p {
-    margin: 0;
+/* Imagem no topo de cada card */
+.project-image {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
 }
 
+/* Conteúdo do card */
+.project-content {
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
 
-/* titulo do content*/
-.prj-title {
+/* Título do projeto */
+.project-title {
     font-size: 20px;
-    font-weight: 600;
-    font-family: "Source Code Pro", monospace;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
+/* Links do GitHub */
+.github-link {
+    color: #6c63ff;
+    text-decoration: none;
+}
 
-/* conteudo do content (kkkk pleonasmo) */
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* Descrição do projeto */
 .prj-desc {
     font-size: 14px;
-    font-weight: 100;
-    opacity: .8;
-    margin-top: 8px;
-    font-family: "Kanit", sans-serif;
+    line-height: 1.6;
 }
 
-/* setinha que vira */
-.arrow {
-    padding: 15px;
-    transform: rotate(-180deg);
-    transition: all .5s;
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu a {
+        font-size: 14px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .foto img {
+        max-width: 150px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .project-card .project-image {
+        height: 200px;
+        background-size: cover;
+    }
 }
 
-.projects:hover .arrow {
-    transform: rotate(0);
-}
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.projects .arrow span {
-    font-size: 24px;
-}
+    .banner {
+        height: 150px;
+        padding: 20px;
+    }
 
-/* contact me*/
+    .buttons button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 
-.contact h2 {
-    margin-bottom: 40px;
-    margin-top: 120px;
-    font-family: "Kanit", sans-serif;
-    margin-left: 75px;
-}
+    .foto img {
+        max-width: 120px;
+    }
 
-.forms {
-    font-family: "VT323", monospace;
-    font-size: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 60px;
-}
+    .text {
+        font-size: 12px;
+    }
 
-.submit button {
-    background-color: #00aaff; /* Cor de fundo */
-    border: none; /* Remove borda padrão */
-    color: #f0f0f0; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    margin: 0 10px; /* Espaçamento horizontal entre botões */
-    border-radius: 20px; /* Bordas arredondadas */
-    cursor: pointer; /* Indica que é clicável */
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 0;
+    }
 }
