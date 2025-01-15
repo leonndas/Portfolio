@@ -40,14 +40,12 @@ body { /*1C1C1C */
     margin-bottom: 50px; /* Espaçamento abaixo do menu */
     box-sizing: border-box; /* Inclui padding e borda na largura total */
     max-width: 100%; /* Garante que não exceda a largura da tela */
-    display: flex; /* deixa ele em linha reta pra mobile*/
     justify-content: center;
 }
 
 /* Estilo do menu */
 .menu {
     display: flex; /* Usa flexbox para alinhar itens */
-    flex-wrap: nowrap; /* Garante que os itens não quebrem para a linha seguinte */
     justify-content: center; /* Centraliza o menu horizontalmente */
     align-items: center; /* Alinha itens verticalmente ao centro */
     padding: 10px 20px; /* Espaçamento interno */
@@ -358,11 +356,12 @@ body div.gif-container img.click-gif {
 
 /* container */
 .titulos {
-    display: flex;
     flex-direction: column; /* Para empilhar o h1 e h2 verticalmente */
     justify-content: center; /* Alinha verticalmente os títulos no centro */
     width: 250%; /* Deixa a titulos ocupar o espaço restante */
     margin-right: 200px;
+    display: flex;
+    flex-wrap: nowrap;
 
 }
 
@@ -379,6 +378,8 @@ body div.gif-container img.click-gif {
     margin: 0; /* Remove margens extras */
     font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
     font-family: "Source Code Pro", monospace;
+    
+   
 }
 
 /* Cor diferente para "&" */
@@ -394,6 +395,7 @@ body div.gif-container img.click-gif {
     flex-direction: column; /* Mantém os links empilhados verticalmente */
     align-items: flex-end; /* Alinha os links à direita */
     gap: 20px; /* Espaço entre os links */
+    padding: 10px;
 }
 
 /* Ajuste no tamanho das imagens dentro de .links */
@@ -405,7 +407,6 @@ body div.gif-container img.click-gif {
 }
 
 .text {
-    min-width: 350%;
     margin-top: 50px;
     font-family: "Source Code Pro", monospace;
     font-size: 16px;
@@ -610,16 +611,22 @@ body div.gif-container img.click-gif {
 /* Responsividade */
 @media (max-width: 768px) {
     .menu a {
-        font-size: 14px;
+        font-size: 10px;
     }
 
-    .banner {
-        height: 200px;
-    }
 
     .buttons button {
         font-size: 14px;
         padding: 8px 15px;
+    }
+
+    .empresa-lista {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .links {
+        padding: 10px;
     }
 
     .foto img {
@@ -627,55 +634,31 @@ body div.gif-container img.click-gif {
     }
 
     .text {
-        font-size: 14px;
+        font-size: 20px;
+        margin-top: 400px;
+        width: 300px;
+        justify-content: center;
+    }
+
+    .titulos {
+        margin-top: 200px;
+        margin-left: -200px;
+    }
+
+    .tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 90px;
     }
 
     .project-card {
-        width: 100%;
+        width: 50%;
         margin-bottom: 20px;
     }
 
     .project-card .project-image {
         height: 200px;
         background-size: cover;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .banner {
-        height: 150px;
-        padding: 20px;
-    }
-
-    .buttons button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-    .foto img {
-        max-width: 120px;
-    }
-
-    .text {
-        font-size: 12px;
-    }
-
-    .tabs {
-        flex-direction: column;
-    }
-
-    .tab-button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    .project-card {
-        width: 100%;
-        margin: 0;
     }
 }
