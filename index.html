@@ -19,19 +19,14 @@
 
      
     <!-- Caixa do menu -->
-    <div class="menu-container">
-        <!-- Ícones para trocar cor e selecionar idioma -->
-        <div class="symbols">
-            <span class="theme-toggle">🌓</span>
-        </div>
-        
-        <!-- Menu de navegação -->
+    <div class="menu-container">   
+       <!-- Menu de navegação -->
         <div class="menu">
             <a href="#main">Início</a>
             <a href="#about">Sobre</a>
             <a href="#blink">Habilidades</a>
             <a href="#blink">Projetos</a>
-            <a href="#contact">Contato</a>
+            <a href="#about">Contato</a>
         </div>
     </div>
 
@@ -111,7 +106,7 @@
             <a href="https://instagram.com/leonndas">
                 <img src="imgs/ig.png" alt="Instagram">
             </a>
-            <a href="https://linkedin.com/leon-santiago-gomes-45490715a/">
+            <a href="https://www.linkedin.com/in/leon-santiago-gomes-45490715a/">
                 <img src="imgs/ld.png" alt="Linkedin">
             </a>
             <a href="https://github.com/leonndas">
@@ -122,11 +117,11 @@
 
     
     
-    <!-- Seção de formação -->
+    <!-- Seção de habilidades  -->
     <section id="hab-container">
     <!-- abas interativas pra habilidades -->
         <div class="tabs"> <!-- botoes -->
-            <button class="tab-button active" onclick="openTab('languages')">Linguagens</button>
+            <button class="tab-button active" onclick="openTab('languages')">Habilidades</button>
             <button class="tab-button" onclick="openTab('idioms')">Idiomas</button>
             <button class="tab-button" onclick="openTab('projects')">Projetos</button>
         </div>
@@ -152,6 +147,11 @@
                     <span>Python</span>
                     <div class="bar" style="--percentage: 55%;"></div>
                 </div>
+
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="bar" style="--percentage: 75%;"></div>
+                </div>
         
 
             </div>
@@ -176,60 +176,82 @@
 
         <!-- projetos -->
         <div class="tab-content" id="projects" style="display: none;">
-            <div class="projects">
-                <div class="img">
-                    <span>Software de Gerenciamento de Funcionários<span>
-                </div>
-
-                <div class="project">
-                    <span class="prj-title">Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link"> GitHub </a></span>
-                    <p class="prj-desc">Conta com o seguinte menu de opções:
-                        <br><br>
-                        1.	Cadastrar Funcionário <br>
-                        2.	Consultar Funcionário <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;2.a	Consultar Todos <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;2.b	Consultar por Id <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;2.c Consultar por setor <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;2.d Retornar ao menu <br>
-                        3.	Remover Funcionário <br>
-                        4.	Encerrar Programa <br>
-                        </p>
-                </div>
-
-                <div class="arrow">
-                    <span>&#8673;</span>
+            <!-- Projeto 1 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('imgs/proj1.png');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Software de gerenciamento de funcionários</h3>
+                    <span class="prj-title">
+                        Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link">GitHub</a>
+                    </span>
+                    <p class="prj-desc">
+                        Menu de opções:<br>
+                        1. Cadastrar Funcionário<br>
+                        2. Consultar Funcionário<br>
+                        &nbsp;&nbsp;2.a Consultar Todos<br>
+                        &nbsp;&nbsp;2.b Consultar por Id<br>
+                        &nbsp;&nbsp;2.c Consultar por setor<br>
+                        &nbsp;&nbsp;2.d Retornar ao menu<br>
+                        3. Remover Funcionário<br>
+                        4. Encerrar Programa
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- contact me (apenas visual ja que git nao salva dados)-->
-    <section>
-        <div id="contact" class="contact">
-            <h2>Entre em contato</h2>
-
-            <div class="forms">
-                <div class="name">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name">
-                </div>
-
-                <div class="email">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-
-                <div class="description">
-                    <label for="description">Descrição:</label><br>
-                    <textarea id="description" name="description" rows="10" cols="40"></textarea>
-                </div>
-
-                <div class="submit">
-                    <button type="submit">Enviar</button>
+        
+            <!-- Projeto 2 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('imgs/proj2.png');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Software de cálculo de parcelas</h3>
+                    <span class="prj-title">
+                        Python: repositório no <a href="https://github.com/leonndas/installment-calc" class="github-link">GitHub</a>
+                    </span>
+                    <p class="prj-desc">
+                        Regras de cálculo:<br>
+                        • Até 3 parcelas: 0% de juros<br>
+                        • De 4 a 5 parcelas: 4% de juros<br>
+                        • De 6 a 8 parcelas: 8% de juros<br>
+                        • De 9 a 12 parcelas: 16% de juros<br>
+                        • Acima de 12 parcelas: 32% de juros
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-</body>
-</html>
+        
+            <!-- Projeto 3 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('imgs/proj3.png');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Software de pedido de refeições</h3>
+                    <span class="prj-title">
+                        Python: repositório no <a href="https://github.com/leonndas/meal-ordering-interface" class="github-link">GitHub</a>
+                    </span>
+                    <p class="prj-desc">
+                        Funcionalidades:<br>
+                        • Seleção de pratos e tamanhos<br>
+                        • Validação de opções<br>
+                        • Acumulador de pedidos<br>
+                        • Loop para adicionar mais itens<br>
+                        • Exibição do valor total ao final
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Projeto 4 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('imgs/proj4.png');"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Software de faturamento de camisetas</h3>
+                    <span class="prj-title">
+                        Python: repositório no <a href="https://github.com/leonndas/t-shirt-billing-software" class="github-link">GitHub</a>
+                    </span>
+                    <p class="prj-desc">
+                        Funcionalidades:<br>
+                        • Aplicação de descontos por quantidade<br>
+                        • Opções de frete<br>
+                        • Validação da quantidade<br>
+                        • Cálculo do valor final com base no modelo e no frete
+                    </p>
+                </div>
+            </div>
+        </section>
+        
