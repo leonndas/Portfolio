@@ -18,20 +18,14 @@
         <div class="logo" id="logo">Leon Santiago</div>
     </div>
     
-    <!-- Caixa do menu -->
-    <div class="menu-container">
-        <!-- Ícones para trocar cor e selecionar idioma -->
-        <div class="symbols">
-            <span class="theme-toggle">🌓</span>
-        </div>
    
        <!-- Menu de navegação -->
         <div class="menu">
-            <a href="#main">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#blink">Habilidades</a>
-            <a href="#blink">Projetos</a>
-            <a href="#about">Contato</a>
+            <a href="#main">Home</a>
+            <a href="#about">About</a>
+            <a href="#blink">Skills</a>
+            <a href="#blink">Projects</a>
+            <a href="#about">Contact</a>
         </div>
     </div>
 
@@ -39,7 +33,7 @@
     <section class="section">
         <div class="banner">
             <!-- Título com cor diferenciada para "TI" -->
-            <h2>Soluções em <span>TI</span></h2>
+            <h2><span>TI</span> Solutions</h2>
         
             <!-- Botões com bordas arredondadas -->
             <div class="buttons">
@@ -50,7 +44,7 @@
     </section>
     <!-- Seção de Experiências -->
     <section id="experiencias">
-        <h2>Experiências</h2>
+        <h2>Experiences</h2>
         <div class="experiencias-container">
             <!-- Lista de Empresas -->
             <div class="empresa-lista" id="empresa-lista"> 
@@ -63,7 +57,7 @@
                     
                         <!-- Adicionando o GIF aqui -->
                     <div class="gif-container">
-                        <img src="https://i.giphy.com/fIfB3luItTEID8qDgD.webp" alt="Clique aqui!" class="click-gif" id="click-gif">
+                        <img src="https://i.giphy.com/fIfB3luItTEID8qDgD.webp" alt="Click here!" class="click-gif" id="click-gif">
                     </div>
                 </div>
 
@@ -86,13 +80,11 @@
             <img src="imgs/img.png" alt="Foto de Leon Santiago" style="max-width: 200px; height: auto;">
             
             <div class="text">
-                <p> E aí, prazer! <br>
+                <p> Hi! <br>
                 <br><br>
-                    Meu nome é Leon Santiago Gomes. Sou de 2000, e nasci e cresci em Guarulhos, segunda maior cidade do estado de São Paulo, no bairro do Pimentas. 
+                    My name is Leon Santiago and I was born and raised in São Paulo, Brazil. When I'm not studying, I usually play videogames or go for a run. I never miss a day at the gym.
                 <br><br><br>
-                    Atualmente, moro no centro de São Paulo e curso Desenvolvimento de Sistemas. Quando não estou estudando ou trabalhando, estou jogando ou treinando na academia.
-                <br><br><br>
-                    Os jogos que mudaram minha vida são: o RuneScape de 2007, Children of Morta, The Sims 2: Castaway, Far Cry 2 e Baldur's Gate 3.
+                    The games that changed my life are: the 2007 version of RuneScape, Children of Morta, The Sims 2: Castaway for the PlayStation 2 and Baldur's Gate 3.
                 </p>
             </div>
 
@@ -102,20 +94,21 @@
         </div>
 
         <div class="titulos">
-            <h1>O Leon</h1>
-            <h2 class="roboto-bold-italic">Backend Developer Jr. <span>&</span> Suporte Técnico</h2>  
+            <h1>Only one person could fix this: The Leon.</h1>
+            <h2 class="roboto-bold-italic">Backend Developer Jr. <span>&</span> Tech Support</h2>  
         </div>
         
         
         <div class="links">
             <!-- Links para redes sociais -->
-            <a href="https://instagram.com/leonndas">
+             <!-- so it will open in a new tab with security -->
+            <a target="_blank" rel="noopener" href="https://instagram.com/leonndas">
                 <img src="imgs/ig.png" alt="Instagram">
             </a>
-            <a href="https://www.linkedin.com/in/leon-santiago-gomes-45490715a/">
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/leon-santiago-gomes-45490715a/">
                 <img src="imgs/ld.png" alt="Linkedin">
             </a>
-            <a href="https://github.com/leonndas">
+            <a target="_blank" rel="noopener" href="https://github.com/leonndas">
                 <img src="imgs/gt.png" alt="Github">
             </a>
         </div>
@@ -127,9 +120,9 @@
     <section id="hab-container">
     <!-- abas interativas pra habilidades -->
         <div class="tabs"> <!-- botoes -->
-            <button class="tab-button active" onclick="openTab('languages')">Habilidades</button>
-            <button class="tab-button" onclick="openTab('idioms')">Idiomas</button>
-            <button class="tab-button" onclick="openTab('projects')">Projetos</button>
+            <button class="tab-button active" onclick="openTab('languages')">Habilities</button>
+            <button class="tab-button" onclick="openTab('idioms')">Languages</button>
+            <button class="tab-button" onclick="openTab('projects')">Projects</button>
         </div>
 
         <!-- conteudo -->
@@ -137,6 +130,11 @@
                 <div class="skill">
                     <span>HTML</span>
                     <div class="bar" style="--percentage: 100%;"></div>
+                </div>
+
+                <div class="skill">
+                    <span>SQL & NoSQL</span>
+                    <div class="bar" style="--percentage: 92%;"></div>
                 </div>
             
                 <div class="skill">
@@ -146,7 +144,12 @@
             
                 <div class="skill">
                     <span>JavaScript</span>
-                    <div class="bar" style="--percentage: 62%;"></div>
+                    <div class="bar" style="--percentage: 72%;"></div>
+                </div>
+
+                <div class="skill">
+                    <span>Cloud</span>
+                    <div class="bar" style="--percentage: 92%;"></div>
                 </div>
             
                 <div class="skill">
@@ -165,17 +168,17 @@
             <!-- cursos -->
             <div class="tab-content" id="idioms" style="display: none;">
                 <div class="skill">
-                    <span>Inglês</span>
+                    <span>English</span>
                     <div class="bar" style="--percentage: 100%;"></div>
                 </div>
             
                 <div class="skill">
-                    <span>Português</span>
+                    <span>Portuguese</span>
                     <div class="bar" style="--percentage: 100%;"></div>
                 </div>
             
                 <div class="skill">
-                    <span>Espanhol</span>
+                    <span>Spanish</span>
                     <div class="bar" style="--percentage: 100%;"></div>
                 </div>
             </div>
@@ -186,20 +189,20 @@
             <div class="project-card">
                 <div class="project-image" style="background-image: url('imgs/proj1.png');"></div>
                 <div class="project-content">
-                    <h3 class="project-title">Software de gerenciamento de funcionários</h3>
+                    <h3 class="project-title">Employee Management Software</h3>
                     <span class="prj-title">
-                        Python: repositório no <a href="https://github.com/leonndas/employee-management" class="github-link">GitHub</a>
+                        Python: repository on <a href="https://github.com/leonndas/employee-management" class="github-link">GitHub</a>
                     </span>
                     <p class="prj-desc">
-                        Menu de opções:<br>
-                        1. Cadastrar Funcionário<br>
-                        2. Consultar Funcionário<br>
-                        &nbsp;&nbsp;2.a Consultar Todos<br>
-                        &nbsp;&nbsp;2.b Consultar por Id<br>
-                        &nbsp;&nbsp;2.c Consultar por setor<br>
-                        &nbsp;&nbsp;2.d Retornar ao menu<br>
-                        3. Remover Funcionário<br>
-                        4. Encerrar Programa
+                        Options Menu:<br>
+                            1. Register Employee<br>
+                            2. View Employee<br>
+                        &nbsp;&nbsp;2.a View All<br>
+                        &nbsp;&nbsp;2.b View by ID<br>
+                        &nbsp;&nbsp;2.c View by Department<br>
+                        &nbsp;&nbsp;2.d Return to Menu<br>
+                            3. Remove Employee<br>
+                            4. Exit Program
                     </p>
                 </div>
             </div>
@@ -208,17 +211,18 @@
             <div class="project-card">
                 <div class="project-image" style="background-image: url('imgs/proj2.png');"></div>
                 <div class="project-content">
-                    <h3 class="project-title">Software de cálculo de parcelas</h3>
+                    <h3 class="project-title">Installment Calculation Software</h3>
                     <span class="prj-title">
-                        Python: repositório no <a href="https://github.com/leonndas/installment-calc" class="github-link">GitHub</a>
+                        Python: repository on <a href="https://github.com/leonndas/installment-calc" class="github-link">GitHub</a>
                     </span>
                     <p class="prj-desc">
-                        Regras de cálculo:<br>
-                        • Até 3 parcelas: 0% de juros<br>
-                        • De 4 a 5 parcelas: 4% de juros<br>
-                        • De 6 a 8 parcelas: 8% de juros<br>
-                        • De 9 a 12 parcelas: 16% de juros<br>
-                        • Acima de 12 parcelas: 32% de juros
+                        Calculation Rules:<br>
+                    • Up to 3 installments: 0% interest<br>
+                    • From 4 to 5 installments: 4% interest<br>
+                    • From 6 to 8 installments: 8% interest<br>
+                    • From 9 to 12 installments: 16% interest<br>
+                    • More than 12 installments: 32% interest
+
                     </p>
                 </div>
             </div>
@@ -227,17 +231,18 @@
             <div class="project-card">
                 <div class="project-image" style="background-image: url('imgs/proj3.png');"></div>
                 <div class="project-content">
-                    <h3 class="project-title">Software de pedido de refeições</h3>
+                    <h3 class="project-title">Meal Ordering Software</h3>
                     <span class="prj-title">
-                        Python: repositório no <a href="https://github.com/leonndas/meal-ordering-interface" class="github-link">GitHub</a>
+                        Python: repository on <a href="https://github.com/leonndas/meal-ordering-interface" class="github-link">GitHub</a>
                     </span>
                     <p class="prj-desc">
-                        Funcionalidades:<br>
-                        • Seleção de pratos e tamanhos<br>
-                        • Validação de opções<br>
-                        • Acumulador de pedidos<br>
-                        • Loop para adicionar mais itens<br>
-                        • Exibição do valor total ao final
+                        Features:<br>
+                    • Selection of dishes and sizes<br>
+                    • Option validation<br>
+                    • Order accumulator<br>
+                    • Loop to add more items<br>
+                    • Display of total amount at the end
+
                     </p>
                 </div>
             </div>
@@ -246,16 +251,17 @@
             <div class="project-card">
                 <div class="project-image" style="background-image: url('imgs/proj4.png');"></div>
                 <div class="project-content">
-                    <h3 class="project-title">Software de faturamento de camisetas</h3>
+                    <h3 class="project-title">T-shirt Sales Management Software</h3>
                     <span class="prj-title">
                         Python: repositório no <a href="https://github.com/leonndas/t-shirt-billing-software" class="github-link">GitHub</a>
                     </span>
                     <p class="prj-desc">
-                        Funcionalidades:<br>
-                        • Aplicação de descontos por quantidade<br>
-                        • Opções de frete<br>
-                        • Validação da quantidade<br>
-                        • Cálculo do valor final com base no modelo e no frete
+                        Features:<br>
+                    • Application of quantity-based discounts<br>
+                    • Shipping options<br>
+                    • Quantity validation<br>
+                    • Final price calculation based on the model and shipping
+
                     </p>
                 </div>
             </div>
