@@ -39,12 +39,10 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
 });
 
-
     // Seleção das empresas 
   const empresaElements = document.querySelectorAll('.empresa');
   const detalhes = document.getElementById('detalhes-experiencia');
   const gifElement = document.getElementById('click-gif');
-
 
   empresaElements.forEach(empresa => {
       empresa.addEventListener('click', () => {
@@ -65,27 +63,26 @@ themeToggle.addEventListener('click', () => {
 });
 });
 
-
 /* experiencias */
 
 const experiencias = {
     apple: {
         title: "Apple",
-        position: "Suporte Técnico Bilíngue",
-        period: "20/03/2020 - 10/08/2020",
-        skills: ["iCloud", "Diagnóstico de hardware", "Atualização de firmware", "iOS", "macOS", "watchOS"]
+        position: "Bilingual Technical Support",
+        period: "03/20/2020 - 08/10/2020",
+        skills: ["iCloud", "Hardware diagnostics", "Firmware updates", "iOS", "macOS", "watchOS"]
     },
     google: {
         title: "Google",
-        position: "Suporte Técnico Bilíngue",
-        period: "15/03/2021 - 13/09/2021",
-        skills: ["Android", "Gmail", "Diagnóstico de bugs", "Google Drive", "Atualização de software", 'Play Store']
+        position: "Bilingual Technical Support",
+        period: "03/15/2021 - 09/13/2021",
+        skills: ["Android", "Gmail", "Bug diagnostics", "Google Drive", "Software updates", "Play Store"]
     },
     airbnb: {
         title: "Airbnb",
-        position: "Suporte Técnico Trilíngue T2",
-        period: "02/05/2022 - 29/06/2023",
-        skills: ["Análise de logs", "Relatório de bugs", "Auditoria", "Monitoramento de fraude", "Manutenção de base de dados", "Autenticação"]
+        position: "Trilingual Technical Support T2",
+        period: "05/02/2022 - 06/29/2023",
+        skills: ["Log analysis", "Bug reporting", "Auditing", "Fraud monitoring", "Database maintenance", "Authentication"]
     }
 };
 
@@ -185,9 +182,5 @@ function openTab(tabName) {
     // Mostrar o conteúdo da aba clicada e adicionar a classe ativa ao botão
     document.getElementById(tabName).style.display = "flex";
     event.currentTarget.className += " active";
-
-    
-
-
 }
 
